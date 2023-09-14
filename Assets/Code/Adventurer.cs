@@ -8,32 +8,64 @@ public class Adventurer : MonoBehaviour
 
     Rigidbody2D _rigidbody2D;
 
+    // State Tracking
+    public int jumpsLeft;
+
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _rigidbody2D.velocity = transform.right * 10f;
+        //_rigidbody2D.velocity = transform.right * 10f;
     }
 
     // Update is called once per frame
     void Update()
     {
         // walk backward
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
-            transform.position += new Vector3(-0.2f, 0, 0);
+            _rigidbody2D.AddForce(Vector2.left * 18f * Time.deltaTime, ForceMode2D.Impulse);
         }
 
         // walk forward
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
-            transform.position += new Vector3(0.2f, 0, 0);
+            _rigidbody2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
         }
 
         // jump
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.W))
         {
-            _rigidbody2D.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
+            if(jumpsLeft > 0)
+            {
+                jumpsLeft--;
+                _rigidbody2D.AddForce(Vector2.up * 12f, ForceMode2D.Impulse);
+            }
         }
+    }
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        // Check that we collided with Ground
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            // Check what is directly below our character's feet
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 1.2f);
+            //Debug.DrawRay(transform.position, Vector2.down * 1.2f); // Visualize Raycast
+
+            // We might have multiple things below our character's feet
+            for (int i = 0; i < hits.Length; i++)
+            {
+                RaycastHit2D hit = hits[i];
+
+                // Check that we collided with ground below our feet
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                {
+                    // Reset jump count
+                    jumpsLeft = 1;
+                }
+            }
+        }
+
     }
 }
