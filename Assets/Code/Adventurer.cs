@@ -48,6 +48,7 @@ public class Adventurer : MonoBehaviour
                 _rigidbody2D.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
             }
         }
+        animator.SetInteger("JumpsLeft", jumpsLeft);
     }
 
     void OnCollisionStay2D(Collision2D other)
