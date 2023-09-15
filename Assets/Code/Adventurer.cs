@@ -7,6 +7,8 @@ public class Adventurer : MonoBehaviour
     // Outlet
 
     Rigidbody2D _rigidbody2D;
+    SpriteRenderer sprite;
+    Animator animator;
 
     // State Tracking
     public int jumpsLeft;
@@ -15,6 +17,8 @@ public class Adventurer : MonoBehaviour
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         //_rigidbody2D.velocity = transform.right * 10f;
     }
 
@@ -25,12 +29,14 @@ public class Adventurer : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             _rigidbody2D.AddForce(Vector2.left * 18f * Time.deltaTime, ForceMode2D.Impulse);
+            sprite.flipX = true;
         }
 
         // walk forward
         if (Input.GetKey(KeyCode.D))
         {
             _rigidbody2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
+            sprite.flipX = false;
         }
 
         // jump
@@ -67,5 +73,10 @@ public class Adventurer : MonoBehaviour
             }
         }
 
+    }
+
+    void FixedUpdate()
+    {
+        animator.SetFloat("Speed", _rigidbody2D.velocity.magnitude);
     }
 }
