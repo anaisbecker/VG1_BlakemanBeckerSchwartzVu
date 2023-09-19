@@ -6,27 +6,55 @@ public class Zombie : MonoBehaviour
 {
     // Outlet
     Rigidbody2D _rigidbody2D;
+    SpriteRenderer sprite;
+    Animator animator;
 
     // State Tracking
-    public float moveSpeed;
+    public float moveSpeed = 10f;
 
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Adventurer target = FindObjectOfType<Adventurer>();
+        Adventurer adventurer = FindObjectOfType<Adventurer>();
 
-        if (target != null)
+        if (adventurer != null)
         {
             // Calculate the direction towards the target.
-            Vector3 direction = (target.transform.position - transform.position).normalized;
+            Vector2 direction = adventurer.transform.position - transform.position;
 
-            // Move the object in the calculated direction.
-            transform.Translate(direction * moveSpeed * Time.deltaTime);
+            if(direction.x < 0)
+            {
+                // Move the object in the calculated direction.
+                _rigidbody2D.AddForce(Vector2.left * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
+                // Flip sprite if zombie is heading left
+                sprite.flipX = true;
+            }
+            else
+            {
+                // Move the object in the calculated direction.
+                _rigidbody2D.AddForce(Vector2.right * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
+                // Zombie is heading right
+                sprite.flipX = false;
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
+        animator.SetFloat("Speed", _rigidbody2D.velocity.magnitude);
+        if(_rigidbody2D.velocity.magnitude > 0)
+        {
+            animator.speed = _rigidbody2D.velocity.magnitude / 3f;
+        }
+        else {
+            animator.speed = 1f;
         }
     }
 }
