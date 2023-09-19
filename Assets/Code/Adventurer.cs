@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Adventurer : MonoBehaviour
 {
     // Outlet
-
+    public Image imageHealthBar;
+    public TMP_Text textGameOver;
     Rigidbody2D _rigidbody2D;
     SpriteRenderer sprite;
     Animator animator;
 
+
     // State Tracking
     public int jumpsLeft;
+    public float health = 100f;
+    public float healthMax = 100f;
 
     // Start is called before the first frame update
     void Start()
@@ -74,10 +80,29 @@ public class Adventurer : MonoBehaviour
             }
         }
 
+        // Check if we collided with Zombie
+        if (other.gameObject.GetComponent<Zombie>())
+        {
+            TakeDamage(5f * Time.deltaTime);
+        }
+
     }
 
     void FixedUpdate()
     {
         animator.SetFloat("Speed", _rigidbody2D.velocity.magnitude);
+    }
+
+    void TakeDamage(float damageAmount)
+    {
+        health -= damageAmount;
+        if(health <= 0)
+        {
+            // TODO: Revisit End Game logic
+            Destroy(gameObject);
+            textGameOver.text = "Game Over";
+        }
+
+        imageHealthBar.fillAmount = health / healthMax;
     }
 }
