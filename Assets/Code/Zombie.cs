@@ -10,13 +10,14 @@ public class Zombie : MonoBehaviour
     Animator animator;
 
     // State Tracking
-    public float moveSpeed = 10f;
+    public float moveSpeed;
 
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        moveSpeed = Random.Range(9f, 11f);
     }
 
     // Update is called once per frame

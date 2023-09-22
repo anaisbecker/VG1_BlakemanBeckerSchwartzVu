@@ -71,8 +71,8 @@ public class Adventurer : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D other)
     {
-        // Check that we collided with Ground
-        if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        // Check that we collided with Ground or is on top of Zombie
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ground") || other.gameObject.GetComponent<Zombie>())
         {
             // Check what is directly below our character's feet
             RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 1.2f);
@@ -83,8 +83,8 @@ public class Adventurer : MonoBehaviour
             {
                 RaycastHit2D hit = hits[i];
 
-                // Check that we collided with ground below our feet
-                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                // Check that we collided with ground below our feet or Zombie
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground") || other.gameObject.GetComponent<Zombie>())
                 {
                     // Reset jump count
                     jumpsLeft = 1;
