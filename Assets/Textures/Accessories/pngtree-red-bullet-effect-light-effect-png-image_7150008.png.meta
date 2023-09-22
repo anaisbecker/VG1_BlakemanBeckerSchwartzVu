@@ -1,0 +1,1024 @@
+fileFormatVersion: 2
+guid: 66a6c7a235d014b6ab132b8184c96199
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 570, z: 105, w: 576}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1067
+        width: 246
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72477d8bf0c0a417f81323a77cc6dad0
+      internalID: 1132365608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_1
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1187
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03611eb5624ce48b1802061a65313af1
+      internalID: -1437805179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_2
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1211
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52895342835fe4116867ea3d3a328c4b
+      internalID: -1191915388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_3
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1067
+        width: 246
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a65cecba2ef84a94987e5cbf63e13f9
+      internalID: -2052691948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_4
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1187
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749c7d780a5414e918de67a03574ea38
+      internalID: 1320204853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_5
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1211
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a07be326b06f492e996d3cefc59cee4
+      internalID: 1177989828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_6
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1129
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71314da5c172c4cf4832d94278ed99fc
+      internalID: -2047345916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_7
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1167
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216d81caeb58d460186281c32600fe71
+      internalID: 122812899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_8
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 1129
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0920232a94d1f434b8a3f6cd5dbe43f6
+      internalID: 104731427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_9
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1167
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8814ddc8018294d1fa886cf825f1aeac
+      internalID: -682712295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_10
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1068
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c216f3773b04e0d81527bd09394f39
+      internalID: -1526076918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_11
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1099
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e9ae081cbaa44a694c888b41deb2e0
+      internalID: -284102160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_12
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 1069
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f424d6476ae224d2c9a09d0c750564d3
+      internalID: -567728882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_13
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1099
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ef0bbe3dd814b8dacc997f8be92df9
+      internalID: 1000175214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 536
+        width: 1157
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 62, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b483fb502c1284b0880b4141d9a95570
+      internalID: -2030145360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_15
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 983
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a8cb15dc95d414daf5c137ac6bef3d
+      internalID: -1941996999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_16
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 983
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc3f0a9214d24e43b6334a6e1344dd7
+      internalID: 1717256706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_17
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 735
+        width: 253
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c69a4f5990643d58da69dabe3068a0
+      internalID: 103240501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_18
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 382
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8e96d734fe6401d9ea5823fa70019f
+      internalID: 1786127266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_19
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 134
+        width: 253
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d8007e3e4b242a2bd1674da349cf85
+      internalID: -714899724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_20
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 382
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d2d6540928142128ff971fd61e4556
+      internalID: -1253273424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_21
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 134
+        width: 253
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5491be8e8a1b24cf9a51447edf102948
+      internalID: 1361932401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_22
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 306
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63dadc7c997a4b58adb92071f70f82c
+      internalID: -1383893805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_23
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 331
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f68b562a71e14d67bff0380fda5ef6e
+      internalID: 1820604726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_24
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 306
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f983271f9386f4d298ca7601c1cdafcc
+      internalID: -365356109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_25
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 331
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad47862e374a641aa91919546593f313
+      internalID: -519674531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_26
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 248
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f506a1dde854c2e87d523a9b8b9c88
+      internalID: 2097698998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_27
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 286
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddf5c807a7fd4dd39e546bb8835a963
+      internalID: 1905039076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_28
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 248
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bccaff6819d44fe89ea27885e198acb
+      internalID: -732285050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_29
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 286
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca85b8e6fcc447498110be782028e60
+      internalID: -882136920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_30
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 188
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857b473ea543a4ad3ae427a9bd01ca9c
+      internalID: 1423754014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_31
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 219
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a692d88ab6ac4c0b95bad7ef5a8efd6
+      internalID: 656478080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_32
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 188
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1386ac3881a4007beec5a454378004
+      internalID: -322061201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_33
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 219
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2bfbc3dba8854a23a814f67bba034a9
+      internalID: 33520393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_34
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 116
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc8343fd5a504df681faef3fc2f4f8e
+      internalID: 259968067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_35
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 0
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859925ebe7a534034bbb1ed12469a9cf
+      internalID: 830001392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_36
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 10
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fe91185b4fd46fc9fec83dd00ed177
+      internalID: -1424424863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_37
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 116
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb76a5d3ebaac489493f1b5c72428270
+      internalID: 1827226011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_38
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 0
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a466937338c5d4d69a32da49531a8412
+      internalID: 1625731873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-red-bullet-effect-light-effect-png-image_7150008_39
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 10
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d8e29512b874dc7a150ef0cd0e9074
+      internalID: 1585978278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -600, y: -110}
+      - {x: -600, y: 70}
+      - {x: 469, y: 73}
+      - {x: 475, y: -90}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_0: 1132365608
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_1: -1437805179
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_10: -1526076918
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_11: -284102160
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_12: -567728882
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_13: 1000175214
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_14: -2030145360
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_15: -1941996999
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_16: 1717256706
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_17: 103240501
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_18: 1786127266
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_19: -714899724
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_2: -1191915388
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_20: -1253273424
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_21: 1361932401
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_22: -1383893805
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_23: 1820604726
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_24: -365356109
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_25: -519674531
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_26: 2097698998
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_27: 1905039076
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_28: -732285050
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_29: -882136920
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_3: -2052691948
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_30: 1423754014
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_31: 656478080
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_32: -322061201
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_33: 33520393
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_34: 259968067
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_35: 830001392
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_36: -1424424863
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_37: 1827226011
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_38: 1625731873
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_39: 1585978278
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_4: 1320204853
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_5: 1177989828
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_6: -2047345916
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_7: 122812899
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_8: 104731427
+      pngtree-red-bullet-effect-light-effect-png-image_7150008_9: -682712295
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

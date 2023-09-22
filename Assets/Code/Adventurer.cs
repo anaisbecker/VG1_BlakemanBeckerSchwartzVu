@@ -12,6 +12,8 @@ public class Adventurer : MonoBehaviour
     Rigidbody2D _rigidbody2D;
     SpriteRenderer sprite;
     Animator animator;
+    public Transform aimPivot;
+    public GameObject projectilePrefab;
 
 
     // State Tracking
@@ -31,6 +33,16 @@ public class Adventurer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // aim toward mouse
+        Vector3 mousePosition = Input.mousePosition;
+        Vector3 mousePositionInWorld = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector3 directionFromPlayerToMouse = mousePositionInWorld - transform.position;
+
+        float radiansToMouse = Mathf.Atan2(directionFromPlayerToMouse.y, directionFromPlayerToMouse.x);
+        float angleToMouse = radiansToMouse * Mathf.Rad2Deg;
+
+        aimPivot.rotation = Quaternion.Euler(0, 0, angleToMouse);
+
         // walk backward
         if (Input.GetKey(KeyCode.A))
         {
