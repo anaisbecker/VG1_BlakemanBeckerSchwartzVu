@@ -868,8 +868,8 @@ GameObject:
   - component: {fileID: 687782193}
   - component: {fileID: 687782195}
   - component: {fileID: 687782196}
-  - component: {fileID: 687782192}
   - component: {fileID: 687782197}
+  - component: {fileID: 687782198}
   m_Layer: 8
   m_Name: Adventurer
   m_TagString: Untagged
@@ -877,25 +877,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &687782192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687782191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa2da27b10654f76b53c7f48261b1db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imageHealthBar: {fileID: 117032399}
-  textGameOver: {fileID: 681010708}
-  aimPivot: {fileID: 1667842428}
-  projectilePrefab: {fileID: 5955464245821329089, guid: cf49d0a746e3542feb181e142d83c0a1, type: 3}
-  jumpsLeft: 1
-  health: 100
-  healthMax: 100
 --- !u!212 &687782193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1046,6 +1027,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &687782198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687782191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa2da27b10654f76b53c7f48261b1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageHealthBar: {fileID: 0}
+  textGameOver: {fileID: 0}
+  aimPivot: {fileID: 1667842428}
+  projectilePrefab: {fileID: 5955464245821329089, guid: cf49d0a746e3542feb181e142d83c0a1, type: 3}
+  adventurer: {fileID: 0}
+  jumpsLeft: 0
+  health: 100
+  healthMax: 100
 --- !u!1 &788959626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,9 +1415,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 1285408844}
   - {fileID: 687782194}
+  - {fileID: 1667842428}
   - {fileID: 1068075385}
   - {fileID: 788959627}
   - {fileID: 1419412435}
   - {fileID: 331323209}
   - {fileID: 1940372183}
-  - {fileID: 1667842428}

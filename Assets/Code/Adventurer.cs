@@ -14,7 +14,7 @@ public class Adventurer : MonoBehaviour
     Animator animator;
     public Transform aimPivot;
     public GameObject projectilePrefab;
-    public GameObject adventurer;
+    //public GameObject adventurer;
     CapsuleCollider2D collider;
 
 
@@ -60,31 +60,37 @@ public class Adventurer : MonoBehaviour
             sprite.flipX = false;
         }
 
-        float crouchHeight = 3.5f;
-        float standHeight = 5f;
-        float crouchOffset = -0.75f;
-
-        // duck
-        if (Input.GetKey(KeyCode.S))
-        {
-            GetComponent<Collider>().size = new Vector2(GetComponent<Collider>().size.x, crouchHeight);
-            GetComponent<Collider>().center = new Vector2(0, crouchOffset);
-            animator.SetTrigger("Crouch");
-
+        if(Input.GetMouseButtonDown(0)) {
+        GameObject newProjectile = Instantiate(projectilePrefab);
+        newProjectile.transform.position = transform.position;
+        newProjectile.transform.rotation = aimPivot.rotation;
         }
 
-        // jump
-        if(Input.GetKeyDown(KeyCode.W))
-        {
-            if(jumpsLeft > 0)
-            {
-                jumpsLeft--;
-                _rigidbody2D.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
-            }
-        }
-        animator.SetInteger("JumpsLeft", jumpsLeft);
-        collider.size = new Vector2(collider.size.x, standHeight);
-        collider.center = new Vector2(0, -crouchOffset);
+    //     float crouchHeight = 3.5f;
+    //     float standHeight = 5f;
+    //     float crouchOffset = -0.75f;
+
+    //     // duck
+    //     if (Input.GetKey(KeyCode.S))
+    //     {
+    //         GetComponent<Collider>().size = new Vector2(GetComponent<Collider>().size.x, crouchHeight);
+    //         GetComponent<Collider>().center = new Vector2(0, crouchOffset);
+    //         animator.SetTrigger("Crouch");
+
+    //     }
+
+    //     // jump
+    //     if(Input.GetKeyDown(KeyCode.W))
+    //     {
+    //         if(jumpsLeft > 0)
+    //         {
+    //             jumpsLeft--;
+    //             _rigidbody2D.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
+    //         }
+    //     }
+    //     animator.SetInteger("JumpsLeft", jumpsLeft);
+    //     collider.size = new Vector2(collider.size.x, standHeight);
+    //     collider.center = new Vector2(0, -crouchOffset);
     }
 
     void OnCollisionStay2D(Collision2D other)

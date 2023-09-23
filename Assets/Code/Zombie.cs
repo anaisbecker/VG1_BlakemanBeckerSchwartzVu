@@ -19,7 +19,11 @@ public class Zombie : MonoBehaviour
         animator = GetComponent<Animator>();
         moveSpeed = Random.Range(9f, 11f);
     }
-
+    void OnCollisionEnter2D(Collision2D other) {
+    if(other.gameObject.GetComponent<Projectile>()){
+    Destroy(gameObject);
+    }
+    }
     // Update is called once per frame
     void Update()
     {
