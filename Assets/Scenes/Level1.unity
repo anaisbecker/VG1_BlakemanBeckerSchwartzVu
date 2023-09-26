@@ -1039,11 +1039,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa2da27b10654f76b53c7f48261b1db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageHealthBar: {fileID: 0}
-  textGameOver: {fileID: 0}
+  imageHealthBar: {fileID: 117032399}
+  textGameOver: {fileID: 681010708}
   aimPivot: {fileID: 1667842428}
   projectilePrefab: {fileID: 5955464245821329089, guid: cf49d0a746e3542feb181e142d83c0a1, type: 3}
-  adventurer: {fileID: 0}
   jumpsLeft: 0
   health: 100
   healthMax: 100

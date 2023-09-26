@@ -66,29 +66,29 @@ public class Adventurer : MonoBehaviour
         newProjectile.transform.rotation = aimPivot.rotation;
         }
 
-    //     float crouchHeight = 3.5f;
-    //     float standHeight = 5f;
-    //     float crouchOffset = -0.75f;
+        //     float crouchHeight = 3.5f;
+        //     float standHeight = 5f;
+        //     float crouchOffset = -0.75f;
 
-    //     // duck
-    //     if (Input.GetKey(KeyCode.S))
-    //     {
-    //         GetComponent<Collider>().size = new Vector2(GetComponent<Collider>().size.x, crouchHeight);
-    //         GetComponent<Collider>().center = new Vector2(0, crouchOffset);
-    //         animator.SetTrigger("Crouch");
+        //     // duck
+        //     if (Input.GetKey(KeyCode.S))
+        //     {
+        //         GetComponent<Collider>().size = new Vector2(GetComponent<Collider>().size.x, crouchHeight);
+        //         GetComponent<Collider>().center = new Vector2(0, crouchOffset);
+        //         animator.SetTrigger("Crouch");
 
-    //     }
+        //     }
 
-    //     // jump
-    //     if(Input.GetKeyDown(KeyCode.W))
-    //     {
-    //         if(jumpsLeft > 0)
-    //         {
-    //             jumpsLeft--;
-    //             _rigidbody2D.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
-    //         }
-    //     }
-    //     animator.SetInteger("JumpsLeft", jumpsLeft);
+        // jump
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (jumpsLeft > 0)
+            {
+                jumpsLeft--;
+                _rigidbody2D.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
+            }
+        }
+        animator.SetInteger("JumpsLeft", jumpsLeft);
     //     collider.size = new Vector2(collider.size.x, standHeight);
     //     collider.center = new Vector2(0, -crouchOffset);
     }
