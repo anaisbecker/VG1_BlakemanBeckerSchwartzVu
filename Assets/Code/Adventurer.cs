@@ -9,6 +9,7 @@ public class Adventurer : MonoBehaviour
     // Outlet
     public Image imageHealthBar;
     public TMP_Text textGameOver;
+    public TMP_Text textBulletsLeft;
     Rigidbody2D _rigidbody2D;
     SpriteRenderer sprite;
     Animator animator;
@@ -22,6 +23,7 @@ public class Adventurer : MonoBehaviour
     public int jumpsLeft;
     public float health = 100f;
     public float healthMax = 100f;
+    public int bulletsLeft = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -60,10 +62,13 @@ public class Adventurer : MonoBehaviour
             sprite.flipX = false;
         }
 
-        if(Input.GetMouseButtonDown(0)) {
-        GameObject newProjectile = Instantiate(projectilePrefab);
-        newProjectile.transform.position = transform.position;
-        newProjectile.transform.rotation = aimPivot.rotation;
+        if(Input.GetMouseButtonDown(0) && bulletsLeft > 0) {
+            GameObject newProjectile = Instantiate(projectilePrefab);
+            newProjectile.transform.position = transform.position;
+            newProjectile.transform.rotation = aimPivot.rotation;
+            // Update Bullets and text
+            bulletsLeft--;
+            textBulletsLeft.text = bulletsLeft.ToString();
         }
 
         //     float crouchHeight = 3.5f;
@@ -91,6 +96,21 @@ public class Adventurer : MonoBehaviour
         animator.SetInteger("JumpsLeft", jumpsLeft);
     //     collider.size = new Vector2(collider.size.x, standHeight);
     //     collider.center = new Vector2(0, -crouchOffset);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.GetComponent<Ammunition>())
+        {
+            bulletsLeft += 10;
+            textBulletsLeft.text = bulletsLeft.ToString();
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.GetComponent<MedKit>())
+        {
+            health = Mathf.Min(healthMax, health + 10f);
+            Destroy(other.gameObject);
+        }
     }
 
     void OnCollisionStay2D(Collision2D other)
