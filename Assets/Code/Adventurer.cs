@@ -15,12 +15,10 @@ public class Adventurer : MonoBehaviour
     Animator animator;
     public Transform aimPivot;
     public GameObject projectilePrefab;
-    //public GameObject adventurer;
-    CapsuleCollider2D collider;
 
 
     // State Tracking
-    public int jumpsLeft;
+    int jumpsLeft = 1;
     public float health = 100f;
     public float healthMax = 100f;
     public int bulletsLeft = 0;
@@ -31,8 +29,6 @@ public class Adventurer : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        collider = GetComponent<CapsuleCollider2D>();
-        //_rigidbody2D.velocity = transform.right * 10f;
     }
 
     // Update is called once per frame
@@ -71,20 +67,20 @@ public class Adventurer : MonoBehaviour
             textBulletsLeft.text = bulletsLeft.ToString();
         }
 
-        //     float crouchHeight = 3.5f;
-        //     float standHeight = 5f;
-        //     float crouchOffset = -0.75f;
+        // Crouch
+        if (Input.GetKey(KeyCode.S))
+        {
+            animator.ResetTrigger("Idle");
+            animator.SetTrigger("Crouch");
+        }
 
-        //     // duck
-        //     if (Input.GetKey(KeyCode.S))
-        //     {
-        //         GetComponent<Collider>().size = new Vector2(GetComponent<Collider>().size.x, crouchHeight);
-        //         GetComponent<Collider>().center = new Vector2(0, crouchOffset);
-        //         animator.SetTrigger("Crouch");
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            animator.ResetTrigger("Crouch");
+            animator.SetTrigger("Idle");
+        }
 
-        //     }
-
-        // jump
+        // Jump
         if (Input.GetKeyDown(KeyCode.W))
         {
             if (jumpsLeft > 0)
@@ -94,8 +90,6 @@ public class Adventurer : MonoBehaviour
             }
         }
         animator.SetInteger("JumpsLeft", jumpsLeft);
-    //     collider.size = new Vector2(collider.size.x, standHeight);
-    //     collider.center = new Vector2(0, -crouchOffset);
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -147,6 +141,14 @@ public class Adventurer : MonoBehaviour
     void FixedUpdate()
     {
         animator.SetFloat("Speed", _rigidbody2D.velocity.magnitude);
+        if (_rigidbody2D.velocity.magnitude > 0)
+        {
+            animator.speed = _rigidbody2D.velocity.magnitude / 3f;
+        }
+        else
+        {
+            animator.speed = 1f;
+        }
     }
 
     void TakeDamage(float damageAmount)

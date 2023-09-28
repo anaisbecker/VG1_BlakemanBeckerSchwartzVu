@@ -1957,7 +1957,7 @@ Transform:
   m_GameObject: {fileID: 633093394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1, y: 3.88, z: -10}
+  m_LocalPosition: {x: -7.1, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2264,8 +2264,8 @@ Transform:
   m_GameObject: {fileID: 687782191}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1, y: 3.88, z: 0}
-  m_LocalScale: {x: 0.8538, y: 0.6853, z: 1}
+  m_LocalPosition: {x: -7.1, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2370,7 +2370,6 @@ MonoBehaviour:
   textBulletsLeft: {fileID: 703173943}
   aimPivot: {fileID: 1667842428}
   projectilePrefab: {fileID: 5955464245821329089, guid: cf49d0a746e3542feb181e142d83c0a1, type: 3}
-  jumpsLeft: 0
   health: 100
   healthMax: 100
   bulletsLeft: 0
@@ -2672,7 +2671,7 @@ Transform:
   m_GameObject: {fileID: 1285408841}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1, y: 3.88, z: -10}
+  m_LocalPosition: {x: -7.1, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
