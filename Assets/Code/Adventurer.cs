@@ -105,6 +105,12 @@ public class Adventurer : MonoBehaviour
             health = Mathf.Min(healthMax, health + 10f);
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.GetComponent<Fire>())
+        {
+            Destroy(gameObject);
+            textGameOver.text = "Game Over";
+        }
     }
 
     void OnCollisionStay2D(Collision2D other)
