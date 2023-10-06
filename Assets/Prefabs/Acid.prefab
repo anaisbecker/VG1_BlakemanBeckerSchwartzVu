@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2527467270130331374}
   - component: {fileID: 8169041146574289779}
   - component: {fileID: 5862278200457878740}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Acid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
