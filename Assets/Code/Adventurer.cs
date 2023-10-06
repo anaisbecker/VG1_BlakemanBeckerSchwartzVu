@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class Adventurer : MonoBehaviour
 {
@@ -96,19 +98,16 @@ public class Adventurer : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Fire>())
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<Renderer>().enabled = false;
             textGameOver.text = "Game Over";
+            StartCoroutine("LoadStartMenuTimer");
         }
 
         if (other.gameObject.GetComponent<Acid>())
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<Renderer>().enabled = false;
             textGameOver.text = "Game Over";
-        }
-
-        if (other.gameObject.GetComponent<Door>())
-        {
-            textGameOver.text = "Level Complete";
+            StartCoroutine("LoadStartMenuTimer");
         }
     }
 
@@ -162,8 +161,9 @@ public class Adventurer : MonoBehaviour
         if(health <= 0)
         {
             // TODO: Revisit End Game logic
-            Destroy(gameObject);
+            gameObject.GetComponent<Renderer>().enabled = false;
             textGameOver.text = "Game Over";
+            StartCoroutine("LoadStartMenuTimer");
         }
 
         imageHealthBar.fillAmount = health / healthMax;
@@ -184,5 +184,19 @@ public class Adventurer : MonoBehaviour
             imageHealthBar.fillAmount = health / healthMax;
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.GetComponent<Door>())
+        {
+            textGameOver.text = "Level Complete";
+            StartCoroutine("LoadStartMenuTimer");
+        }
+    }
+
+    IEnumerator LoadStartMenuTimer()
+    {
+        // Wait
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(0);
     }
 }
