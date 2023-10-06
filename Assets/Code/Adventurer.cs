@@ -111,6 +111,11 @@ public class Adventurer : MonoBehaviour
             Destroy(gameObject);
             textGameOver.text = "Game Over";
         }
+
+        if (other.gameObject.GetComponent<Door>())
+        {
+            textGameOver.text = "Level Complete";
+        }
     }
 
     void OnCollisionStay2D(Collision2D other)
