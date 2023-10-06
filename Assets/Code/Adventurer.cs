@@ -112,6 +112,12 @@ public class Adventurer : MonoBehaviour
             textGameOver.text = "Game Over";
         }
 
+        if (other.gameObject.GetComponent<Acid>())
+        {
+            Destroy(gameObject);
+            textGameOver.text = "Game Over";
+        }
+
         if (other.gameObject.GetComponent<Door>())
         {
             textGameOver.text = "Level Complete";

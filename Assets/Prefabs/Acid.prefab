@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 46190663093593112}
   - component: {fileID: 2527467270130331374}
   - component: {fileID: 8169041146574289779}
-  - component: {fileID: 596226267006683993}
-  m_Layer: 0
+  - component: {fileID: 5862278200457878740}
+  m_Layer: 10
   m_Name: Acid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1282667394, guid: 3d1b0cf21cffd4f1388548a90ef3511f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.45}
   m_EdgeRadius: 0
---- !u!114 &596226267006683993
+--- !u!114 &5862278200457878740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,6 +140,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3268455649848653381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dda8633e24504b8a8bc2c7fbb3d7099, type: 3}
+  m_Script: {fileID: 11500000, guid: f133f2dee1785435e985608ef9c868dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

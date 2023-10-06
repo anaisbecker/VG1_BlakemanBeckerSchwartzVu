@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
 
     // Outlet
-    public Transform spawnPoint;
+    public Transform[] spawnPoints;
     public GameObject zombiePrefab;
     public GameObject ammunitionPrefab;
     public GameObject medKitPrefab;
@@ -33,8 +33,10 @@ public class GameController : MonoBehaviour
 
     void SpawnZombie()
     {
-        // Spawn 
-        Instantiate(zombiePrefab, spawnPoint.position, Quaternion.identity);
+        // Spawn
+        int randomSpawnIndex = Random.Range(0, spawnPoints.Length);
+        Transform randomSpawnPoint = spawnPoints[randomSpawnIndex];
+        Instantiate(zombiePrefab, randomSpawnPoint.position, Quaternion.identity);
     }
 
     IEnumerator ZombieSpawnTimer()
@@ -51,9 +53,11 @@ public class GameController : MonoBehaviour
 
     void SpawnAmmunition()
     {
-        Vector3 distance = new Vector3(Random.Range(-20, 0), 0, 0);
+        Vector3 distance = new Vector3(Random.Range(-15, 0), 0, 0);
         // Spawn
-        Instantiate(ammunitionPrefab, spawnPoint.position + distance, Quaternion.identity);
+        int randomSpawnIndex = Random.Range(0, spawnPoints.Length);
+        Transform randomSpawnPoint = spawnPoints[randomSpawnIndex];
+        Instantiate(ammunitionPrefab, randomSpawnPoint.position + distance, Quaternion.identity);
     }
 
     IEnumerator AmmunitionSpawnTimer()
@@ -70,9 +74,11 @@ public class GameController : MonoBehaviour
 
     void SpawnMedKit()
     {
-        Vector3 distance = new Vector3(Random.Range(-20, 0), 0, 0);
+        Vector3 distance = new Vector3(Random.Range(-15, 0), 0, 0);
         // Spawn
-        Instantiate(medKitPrefab, spawnPoint.position + distance, Quaternion.identity);
+        int randomSpawnIndex = Random.Range(0, spawnPoints.Length);
+        Transform randomSpawnPoint = spawnPoints[randomSpawnIndex];
+        Instantiate(medKitPrefab, randomSpawnPoint.position + distance, Quaternion.identity);
     }
 
     IEnumerator MedKitSpawnTimer()
