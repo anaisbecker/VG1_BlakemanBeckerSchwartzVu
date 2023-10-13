@@ -37,14 +37,14 @@ public class Adventurer : MonoBehaviour
     void Update()
     {
         // aim toward mouse
-        Vector3 mousePosition = Input.mousePosition;
-        Vector3 mousePositionInWorld = Camera.main.ScreenToWorldPoint(mousePosition);
-        Vector3 directionFromPlayerToMouse = mousePositionInWorld - transform.position;
+        //Vector3 mousePosition = Input.mousePosition;
+        //Vector3 mousePositionInWorld = Camera.main.ScreenToWorldPoint(mousePosition);
+        //Vector3 directionFromPlayerToMouse = mousePositionInWorld - transform.position;
 
-        float radiansToMouse = Mathf.Atan2(directionFromPlayerToMouse.y, directionFromPlayerToMouse.x);
-        float angleToMouse = radiansToMouse * Mathf.Rad2Deg;
+        //float radiansToMouse = Mathf.Atan2(directionFromPlayerToMouse.y, directionFromPlayerToMouse.x);
+        //float angleToMouse = radiansToMouse * Mathf.Rad2Deg;
 
-        aimPivot.rotation = Quaternion.Euler(0, 0, angleToMouse);
+        //aimPivot.rotation = Quaternion.Euler(0, 0, angleToMouse);
 
         // walk backward
         if (Input.GetKey(KeyCode.A))
@@ -60,10 +60,17 @@ public class Adventurer : MonoBehaviour
             sprite.flipX = false;
         }
 
-        if(Input.GetMouseButtonDown(0) && bulletsLeft > 0) {
-            GameObject newProjectile = Instantiate(projectilePrefab);
-            newProjectile.transform.position = transform.position;
-            newProjectile.transform.rotation = aimPivot.rotation;
+        if(Input.GetKeyDown(KeyCode.Space) && bulletsLeft > 0) {
+            GameObject newProjectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            if (sprite.flipX == false)
+            {
+                newProjectile.transform.right = transform.right;
+            }
+            else
+            {
+                newProjectile.transform.right = -transform.right;
+            }
+            
             // Update Bullets and text
             bulletsLeft--;
             textBulletsLeft.text = bulletsLeft.ToString();
