@@ -11,6 +11,7 @@ public class Zombie : MonoBehaviour
 
     // State Tracking
     public float moveSpeed;
+    public float health = 100f;
 
     void Start()
     {
@@ -23,7 +24,11 @@ public class Zombie : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.GetComponent<Projectile>())
         {
-            Destroy(gameObject);
+            health -= 20f;
+            if(health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
 
         if (other.gameObject.GetComponent<Acid>())

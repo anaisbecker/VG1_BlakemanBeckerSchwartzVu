@@ -137,7 +137,7 @@ public class Adventurer : MonoBehaviour
         // Check if we collided with Zombie
         if (other.gameObject.GetComponent<Zombie>())
         {
-            TakeDamage(5f * Time.deltaTime);
+            TakeDamage(10f * Time.deltaTime);
         }
 
     }
