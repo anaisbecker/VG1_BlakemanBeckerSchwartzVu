@@ -171,24 +171,33 @@ public class Adventurer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<Ammunition>())
-        {
-            bulletsLeft += 10;
-            textBulletsLeft.text = bulletsLeft.ToString();
-            Destroy(other.gameObject);
-        }
-
-        if (other.gameObject.GetComponent<MedKit>())
-        {
-            health = Mathf.Min(healthMax, health + 10f);
-            imageHealthBar.fillAmount = health / healthMax;
-            Destroy(other.gameObject);
-        }
-
         if (other.gameObject.GetComponent<Door>())
         {
             textGameOver.text = "Level Complete";
             StartCoroutine("LoadStartMenuTimer");
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.GetComponent<Ammunition>())
+        {
+            if (Input.GetKeyDown(KeyCode.R) == true)
+            {
+                bulletsLeft += 10;
+                textBulletsLeft.text = bulletsLeft.ToString();
+                Destroy(other.gameObject);
+            }
+        }
+
+        if (other.gameObject.GetComponent<MedKit>())
+        {
+            if (Input.GetKeyDown(KeyCode.R) == true)
+            {
+                health = Mathf.Min(healthMax, health + 10f);
+                imageHealthBar.fillAmount = health / healthMax;
+                Destroy(other.gameObject);
+            }
         }
     }
 
