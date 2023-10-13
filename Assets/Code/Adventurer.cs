@@ -23,7 +23,7 @@ public class Adventurer : MonoBehaviour
     int jumpsLeft = 1;
     public float health = 100f;
     public float healthMax = 100f;
-    public int bulletsLeft = 0;
+    public int bulletsLeft = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +31,9 @@ public class Adventurer : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        bulletsLeft = 5;
+        textBulletsLeft.text = bulletsLeft.ToString();
+
     }
 
     // Update is called once per frame
@@ -136,7 +139,7 @@ public class Adventurer : MonoBehaviour
                 if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground") || other.gameObject.GetComponent<Zombie>())
                 {
                     // Reset jump count
-                    jumpsLeft = 1;
+                    jumpsLeft = 2;
                 }
             }
         }

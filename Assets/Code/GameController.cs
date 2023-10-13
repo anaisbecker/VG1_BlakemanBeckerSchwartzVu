@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour
     IEnumerator ZombieSpawnTimer()
     {
         // Wait
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         // Spawn Zombie
         SpawnZombie();
@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
     IEnumerator AmmunitionSpawnTimer()
     {
         // Wait
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(10);
 
         // Spawn Ammunition
         SpawnAmmunition();
