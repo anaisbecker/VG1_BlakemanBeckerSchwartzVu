@@ -23,6 +23,15 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.GetComponent<Zombie>())
+        {
+            SoundManager.instance.PlaySoundHit();
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            SoundManager.instance.PlaySoundMiss();
+        }
+
         Destroy(gameObject);
     }
 }

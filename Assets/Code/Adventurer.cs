@@ -24,6 +24,8 @@ public class Adventurer : MonoBehaviour
     public float health = 100f;
     public float healthMax = 100f;
     public int bulletsLeft = 5;
+    public bool bounceBack = false;
+    public Vector2 movement;
 
     // Start is called before the first frame update
     void Start()
@@ -148,6 +150,7 @@ public class Adventurer : MonoBehaviour
         if (other.gameObject.GetComponent<Zombie>())
         {
             TakeDamage(10f * Time.deltaTime);
+            bounceBack = true;
         }
 
     }
@@ -163,6 +166,19 @@ public class Adventurer : MonoBehaviour
         {
             animator.speed = 1f;
         }
+
+        if (bounceBack)
+        {
+            movement.x = Input.GetAxis("Horizontal");
+            movement.y = Input.GetAxis("Vertical");
+            _rigidbody2D.MovePosition(_rigidbody2D.position + movement * -5f * Time.fixedDeltaTime);
+            Invoke("StopBounce", 0.3f);
+        }   
+    }
+
+    void StopBounce()
+    {
+        bounceBack = false;
     }
 
     void TakeDamage(float damageAmount)
