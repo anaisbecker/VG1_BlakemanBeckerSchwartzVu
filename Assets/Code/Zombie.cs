@@ -8,10 +8,17 @@ public class Zombie : MonoBehaviour
     Rigidbody2D _rigidbody2D;
     SpriteRenderer sprite;
     Animator animator;
-
+    [SerializeField] HealthBar healthBar;
+    
     // State Tracking
     public float moveSpeed;
     public float health = 100f;
+    public float healthMax = 100f;
+
+    void Awake()
+    {
+        healthBar = GetComponentInChildren<HealthBar>();
+    }
 
     void Start()
     {
@@ -19,13 +26,16 @@ public class Zombie : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         moveSpeed = Random.Range(9f, 11f);
+        healthBar.UpdateHealthBar(health, healthMax);
     }
 
     void OnCollisionEnter2D(Collision2D other) {
+        // Take Damage
         if (other.gameObject.GetComponent<Projectile>())
         {
-            health -= 20f;
-            if(health <= 0)
+            health -= 25f;
+            healthBar.UpdateHealthBar(health, healthMax);
+            if (health <= 0)
             {
                 Destroy(gameObject);
             }
