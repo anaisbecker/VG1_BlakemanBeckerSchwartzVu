@@ -9,17 +9,21 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     bool isMuted;
 
-
     public void Pause()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
+        Adventurer.instance.isPaused = true;
     }
 
     public void Resume()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        if (Adventurer.instance != null)
+        {
+            Adventurer.instance.isPaused = false;
+        }
     }
 
     public void Home()
@@ -36,7 +40,7 @@ public class PauseMenu : MonoBehaviour
     {
         isMuted = !isMuted;
         AudioListener.volume = isMuted ? 0 : 1;
-        if (isMuted)
+        if (AudioListener.volume == 0)
         {
             button.image.sprite = mutedImage;
         }

@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class Adventurer : MonoBehaviour
 {
+    public static Adventurer instance;
+    
     // Outlet
     public Image imageHealthBar;
     public TMP_Text textGameOver;
@@ -26,6 +28,12 @@ public class Adventurer : MonoBehaviour
     public int bulletsLeft = 5;
     public bool bounceBack = false;
     public Vector2 movement;
+    public bool isPaused;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +58,13 @@ public class Adventurer : MonoBehaviour
         //float angleToMouse = radiansToMouse * Mathf.Rad2Deg;
 
         //aimPivot.rotation = Quaternion.Euler(0, 0, angleToMouse);
+
+        // On Menu Pause
+        if(isPaused)
+        {
+            return;
+        }
+
 
         // walk backward
         if (Input.GetKey(KeyCode.A))
