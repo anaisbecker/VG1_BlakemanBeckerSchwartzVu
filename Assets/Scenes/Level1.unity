@@ -4766,6 +4766,7 @@ MonoBehaviour:
   bulletsLeft: 0
   bounceBack: 0
   movement: {x: 0, y: 0}
+  isPaused: 0
 --- !u!1 &703173941
 GameObject:
   m_ObjectHideFlags: 0
@@ -6990,6 +6991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missSound: {fileID: 8300000, guid: d58557b8b11c1459b8a445586aa2aa6b, type: 3}
   hitSound: {fileID: 8300000, guid: e8a2db1b472fb41c68d9de949913e5d8, type: 3}
+  hurtSound: {fileID: 8300000, guid: 02b24737acd31438fb71da83ab71436c, type: 3}
 --- !u!82 &2050570121
 AudioSource:
   m_ObjectHideFlags: 0
