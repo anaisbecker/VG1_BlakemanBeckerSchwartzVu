@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     AudioSource audioSource;
     public AudioClip missSound;
     public AudioClip hitSound;
+    public AudioClip hurtSound;
 
     void Awake()
     {
@@ -35,6 +36,11 @@ public class SoundManager : MonoBehaviour
     public void PlaySoundMiss()
     {
         audioSource.PlayOneShot(missSound);
+    }
+
+    public void PlaySoundHurt()
+    {
+        audioSource.PlayOneShot(hurtSound);
     }
 }
 

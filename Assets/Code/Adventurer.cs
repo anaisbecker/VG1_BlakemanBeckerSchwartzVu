@@ -29,6 +29,7 @@ public class Adventurer : MonoBehaviour
     public bool bounceBack = false;
     public Vector2 movement;
     public bool isPaused;
+    private float lastHurtSoundTime = 0f;
 
     void Awake()
     {
@@ -164,10 +165,24 @@ public class Adventurer : MonoBehaviour
         // Check if we collided with Zombie
         if (other.gameObject.GetComponent<Zombie>())
         {
-            TakeDamage(10f * Time.deltaTime);
-            bounceBack = true;
-        }
 
+            if (Time.time - lastHurtSoundTime >= 1.5f)
+            {
+                SoundManager.instance.PlaySoundHurt();
+
+                lastHurtSoundTime = Time.time;
+                TakeDamage(10f * Time.deltaTime);
+                bounceBack = true;
+            }
+
+
+            else
+            {
+                TakeDamage(10f * Time.deltaTime);
+                bounceBack = true;
+            }
+
+        }
     }
 
     void FixedUpdate()
