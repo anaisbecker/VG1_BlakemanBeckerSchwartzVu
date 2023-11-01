@@ -25,7 +25,7 @@ public class Adventurer : MonoBehaviour
     int jumpsLeft = 1;
     public float health = 100f;
     public float healthMax = 100f;
-    public int bulletsLeft = 5;
+    public int bulletsLeft = 10;
     public bool bounceBack = false;
     public Vector2 movement;
     public bool isPaused;
@@ -42,7 +42,7 @@ public class Adventurer : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        bulletsLeft = 5;
+        bulletsLeft = 10;
         textBulletsLeft.text = bulletsLeft.ToString();
 
     }
@@ -242,22 +242,27 @@ public class Adventurer : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Ammunition>())
         {
-            if (Input.GetKeyDown(KeyCode.R) == true)
-            {
-                bulletsLeft += 10;
-                textBulletsLeft.text = bulletsLeft.ToString();
-                Destroy(other.gameObject);
-            }
+            
+            bulletsLeft += 10;
+            textBulletsLeft.text = bulletsLeft.ToString();
+            Destroy(other.gameObject);
+            
         }
 
         if (other.gameObject.GetComponent<MedKit>())
         {
-            if (Input.GetKeyDown(KeyCode.R) == true)
+            if (health / healthMax == 1)
+            {
+                //if our health is full, we won't pick up the medkit
+            }
+            else
             {
                 health = Mathf.Min(healthMax, health + 10f);
                 imageHealthBar.fillAmount = health / healthMax;
                 Destroy(other.gameObject);
             }
+            
+            
         }
     }
 
