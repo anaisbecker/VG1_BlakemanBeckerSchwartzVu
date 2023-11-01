@@ -126,16 +126,12 @@ public class Adventurer : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Fire>())
         {
-            gameObject.GetComponent<Renderer>().enabled = false;
-            textGameOver.text = "Game Over";
-            StartCoroutine("LoadStartMenuTimer");
+            Die();
         }
 
         if (other.gameObject.GetComponent<Acid>())
         {
-            gameObject.GetComponent<Renderer>().enabled = false;
-            textGameOver.text = "Game Over";
-            StartCoroutine("LoadStartMenuTimer");
+            Die();
         }
     }
 
@@ -216,13 +212,19 @@ public class Adventurer : MonoBehaviour
         health -= damageAmount;
         if(health <= 0)
         {
-            // TODO: Revisit End Game logic
-            gameObject.GetComponent<Renderer>().enabled = false;
-            textGameOver.text = "Game Over";
-            StartCoroutine("LoadStartMenuTimer");
+            Die();
         }
 
         imageHealthBar.fillAmount = health / healthMax;
+    }
+
+    void Die()
+    {
+        gameObject.GetComponent<Renderer>().enabled = false;
+        textGameOver.text = "Game Over";
+        GameController.instance.timeGoing = false;
+
+        StartCoroutine("LoadStartMenuTimer");
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -230,6 +232,8 @@ public class Adventurer : MonoBehaviour
         if (other.gameObject.GetComponent<Door>())
         {
             textGameOver.text = "Level Complete";
+            GameController.instance.timeGoing = false;
+
             StartCoroutine("LoadStartMenuTimer");
         }
     }

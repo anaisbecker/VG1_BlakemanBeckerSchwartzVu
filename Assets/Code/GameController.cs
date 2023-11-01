@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -12,9 +14,12 @@ public class GameController : MonoBehaviour
     public GameObject zombiePrefab;
     public GameObject ammunitionPrefab;
     public GameObject medKitPrefab;
+    public TMP_Text textTimer;
 
     // State Tracking
     public float timeElapsed;
+    public bool timeGoing;
+    private TimeSpan timePlaying;
 
     void Awake()
     {
@@ -24,17 +29,30 @@ public class GameController : MonoBehaviour
         StartCoroutine("MedKitSpawnTimer");
     }
 
+    void Start()
+    {
+        timeGoing = true;
+        timeElapsed = 0f;
+        textTimer.text = "Time: 00:00.00";
+    }
 
     void Update()
     {
-        // Increment passage of time for each frame of the game
-        timeElapsed += Time.deltaTime;
+        if(timeGoing)
+        {
+            // Increment passage of time for each frame of the game
+            timeElapsed += Time.deltaTime;
+
+            // Update Timer Counter
+            timePlaying = TimeSpan.FromSeconds(timeElapsed);
+            textTimer.text = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
+        }
     }
 
     void SpawnZombie()
     {
         // Spawn
-        int randomSpawnIndex = Random.Range(0, spawnPoints.Length);
+        int randomSpawnIndex = UnityEngine.Random.Range(0, spawnPoints.Length);
         Transform randomSpawnPoint = spawnPoints[randomSpawnIndex];
         Instantiate(zombiePrefab, randomSpawnPoint.position, Quaternion.identity);
     }
@@ -53,9 +71,9 @@ public class GameController : MonoBehaviour
 
     void SpawnAmmunition()
     {
-        Vector3 distance = new Vector3(Random.Range(-15, 0), 0, 0);
+        Vector3 distance = new Vector3(UnityEngine.Random.Range(-15, 0), 0, 0);
         // Spawn
-        int randomSpawnIndex = Random.Range(0, spawnPoints.Length);
+        int randomSpawnIndex = UnityEngine.Random.Range(0, spawnPoints.Length);
         Transform randomSpawnPoint = spawnPoints[randomSpawnIndex];
         Instantiate(ammunitionPrefab, randomSpawnPoint.position + distance, Quaternion.identity);
     }
@@ -74,9 +92,9 @@ public class GameController : MonoBehaviour
 
     void SpawnMedKit()
     {
-        Vector3 distance = new Vector3(Random.Range(-15, 0), 0, 0);
+        Vector3 distance = new Vector3(UnityEngine.Random.Range(-15, 0), 0, 0);
         // Spawn
-        int randomSpawnIndex = Random.Range(0, spawnPoints.Length);
+        int randomSpawnIndex = UnityEngine.Random.Range(0, spawnPoints.Length);
         Transform randomSpawnPoint = spawnPoints[randomSpawnIndex];
         Instantiate(medKitPrefab, randomSpawnPoint.position + distance, Quaternion.identity);
     }
