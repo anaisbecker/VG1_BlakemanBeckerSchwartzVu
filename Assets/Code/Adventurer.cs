@@ -234,7 +234,7 @@ public class Adventurer : MonoBehaviour
             textGameOver.text = "Level Complete";
             GameController.instance.timeGoing = false;
 
-            StartCoroutine("LoadStartMenuTimer");
+            StartCoroutine("LoadNextLevelTimer");
         }
     }
 
@@ -269,8 +269,16 @@ public class Adventurer : MonoBehaviour
     IEnumerator LoadStartMenuTimer()
     {
         // Wait
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
 
         SceneManager.LoadScene(0);
+    }
+
+    IEnumerator LoadNextLevelTimer()
+    {
+        // Wait
+        yield return new WaitForSeconds(2);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
