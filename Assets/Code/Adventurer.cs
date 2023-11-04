@@ -234,7 +234,18 @@ public class Adventurer : MonoBehaviour
             textGameOver.text = "Level Complete";
             GameController.instance.timeGoing = false;
 
-            StartCoroutine("LoadNextLevelTimer");
+
+            // Check if there is another level after this
+            if(SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+            {
+                // Load Next Level
+                StartCoroutine("LoadNextLevelTimer");
+            }
+            else
+            {
+                // Return to Start Menu
+                StartCoroutine("LoadStartMenuTimer");
+            }
         }
     }
 
