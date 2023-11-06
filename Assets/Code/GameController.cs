@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class GameController : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class GameController : MonoBehaviour
     public float timeElapsed;
     public bool timeGoing;
     private TimeSpan timePlaying;
+    private int maxScores = 3; // Number of high scores to track each level
 
     void Awake()
     {
@@ -109,5 +112,55 @@ public class GameController : MonoBehaviour
 
         // Repeat
         StartCoroutine("MedKitSpawnTimer");
+    }
+
+
+    // Stop timer & track current score at the end of the level
+    public void CompleteRound()
+    {
+        // Stop Timer
+        timeGoing = false;
+
+        // Get Current Level
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+
+        // Get scores from memory and add new score
+        List<string> scores = GetScores(currentLevel);
+
+        scores.Add(timeElapsed.ToString());
+        scores.Sort((a, b) => float.Parse(b).CompareTo(float.Parse(a)));
+
+        // Keep only top maxScores scores
+        if (scores.Count > maxScores)
+        {
+            scores.RemoveRange(maxScores, scores.Count - maxScores);
+        }
+
+        SaveScores(scores, currentLevel);
+    }
+
+    // Retrieve scores from PlayerPrefs
+    private List<string> GetScores(int level)
+    {
+        // Save Default scores
+        if (!PlayerPrefs.HasKey("Level_" + level))
+        {
+            List<string> initialScores = new List<string>();
+            for (int i = 0; i < maxScores; i++)
+            {
+                initialScores.Add("0");
+            }
+            SaveScores(initialScores, level);
+        }
+        string scoreString = PlayerPrefs.GetString("Level_" + level);
+        return new List<string>(scoreString.Split(','));
+    }
+
+    // Save scores to PlayerPrefs
+    private void SaveScores(List<string> scores, int level)
+    {
+        string scoreString = string.Join(",", scores);
+        PlayerPrefs.SetString("Level_" + level, scoreString);
+        PlayerPrefs.Save();
     }
 }

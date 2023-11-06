@@ -222,6 +222,7 @@ public class Adventurer : MonoBehaviour
     {
         gameObject.GetComponent<Renderer>().enabled = false;
         textGameOver.text = "Game Over";
+        // Stop Timer
         GameController.instance.timeGoing = false;
 
         StartCoroutine("LoadStartMenuTimer");
@@ -232,7 +233,7 @@ public class Adventurer : MonoBehaviour
         if (other.gameObject.GetComponent<Door>())
         {
             textGameOver.text = "Level Complete";
-            GameController.instance.timeGoing = false;
+            GameController.instance.CompleteRound();
 
 
             // Check if there is another level after this
