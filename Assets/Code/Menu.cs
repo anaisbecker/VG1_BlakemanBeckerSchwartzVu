@@ -29,6 +29,10 @@ public class Menu : MonoBehaviour
     {
         UpdateScoreboard(2);
     }
+    public void ShowScoreLevel3()
+    {
+        UpdateScoreboard(3);
+    }
 
     private void UpdateScoreboard(int level)
     {
@@ -112,5 +116,17 @@ public class Menu : MonoBehaviour
     public void OnPlayLevel2()
     {
         SceneManager.LoadScene(2);
+    }
+    public void OnPlayLevel3()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void levelsMenu()
+    {
+        SceneManager.LoadScene(3);
+    }
+    public void startMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
