@@ -19,6 +19,7 @@ public class Adventurer : MonoBehaviour
     Animator animator;
     public Transform aimPivot;
     public GameObject projectilePrefab;
+    public Image bloodSplatter;
 
 
     // State Tracking
@@ -44,6 +45,7 @@ public class Adventurer : MonoBehaviour
         animator = GetComponent<Animator>();
         bulletsLeft = 10;
         textBulletsLeft.text = bulletsLeft.ToString();
+        bloodSplatter.enabled = true;
 
     }
 
@@ -161,6 +163,7 @@ public class Adventurer : MonoBehaviour
         // Check if we collided with Zombie
         if (other.gameObject.GetComponent<Zombie>())
         {
+            StartCoroutine(ShowBloodSplatter());
 
             if (Time.time - lastHurtSoundTime >= 1.5f)
             {
@@ -292,5 +295,12 @@ public class Adventurer : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator ShowBloodSplatter()
+    {
+        bloodSplatter.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        bloodSplatter.enabled = false;
     }
 }

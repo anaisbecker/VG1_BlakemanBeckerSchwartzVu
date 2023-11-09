@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &20361490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2958150277501898650, guid: 53414db61e5a946438b84e0998ff565b, type: 3}
+  m_PrefabInstance: {fileID: 6493164009764960005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &88936852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4206,6 +4217,7 @@ MonoBehaviour:
   textBulletsLeft: {fileID: 703173943}
   aimPivot: {fileID: 1667842428}
   projectilePrefab: {fileID: 5955464245821329089, guid: cf49d0a746e3542feb181e142d83c0a1, type: 3}
+  bloodSplatter: {fileID: 20361490}
   health: 100
   healthMax: 100
   bulletsLeft: 0
