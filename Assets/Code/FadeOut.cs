@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
+// CITATION
+// using code from https://gamedevelopertips.com/unity-how-fade-between-scenes/
+
 public class FadeOut : MonoBehaviour
 {
     public Image fadeOutUIImage;
