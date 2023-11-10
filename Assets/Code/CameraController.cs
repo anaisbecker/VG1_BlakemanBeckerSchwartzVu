@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CameraController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class CameraController : MonoBehaviour
     // Configuration
     public Vector3 offset;
     public float smoothness;
+    public Vector3 panEndPosition = new Vector3(-18, -12, 0);
 
     // State Tracking
     Vector3 _velocity;
@@ -17,7 +19,7 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(target)
+        if (target)
         {
             offset = transform.position - target.position;
         }

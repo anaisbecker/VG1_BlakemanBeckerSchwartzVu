@@ -31,6 +31,7 @@ public class Adventurer : MonoBehaviour
     public Vector2 movement;
     public bool isPaused;
     private float lastHurtSoundTime = 0f;
+    public string sceneName;
 
     void Awake()
     {
@@ -238,9 +239,8 @@ public class Adventurer : MonoBehaviour
             textGameOver.text = "Level Complete";
             GameController.instance.CompleteRound();
 
-
             // Check if there is another level after this
-            if(SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+            if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
             {
                 // Load Next Level
                 StartCoroutine("LoadNextLevelTimer");
@@ -285,16 +285,18 @@ public class Adventurer : MonoBehaviour
     {
         // Wait
         yield return new WaitForSeconds(2);
-
-        SceneManager.LoadScene(0);
+        //name = GetSceneName(0);
+        //StartCoroutine(GameObject.FindObjectOfType<FadeOut>().FadeAndLoadScene(FadeOut.FadeDirection.In, name));
+        //SceneManager.LoadScene(0);
     }
 
     IEnumerator LoadNextLevelTimer()
     {
         // Wait
         yield return new WaitForSeconds(2);
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //name = GetSceneName(SceneManager.GetActiveScene().buildIndex + 1);
+        //StartCoroutine(GameObject.FindObjectOfType<FadeOut>().FadeAndLoadScene(FadeOut.FadeDirection.In, name));
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     IEnumerator ShowBloodSplatter()
@@ -303,4 +305,18 @@ public class Adventurer : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         bloodSplatter.enabled = false;
     }
+
+    private static string GetSceneName(int buildIndex)
+    {
+        if (buildIndex > SceneManager.sceneCountInBuildSettings - 1)
+        {
+            Debug.LogErrorFormat("Incorrect buildIndex {0}!", buildIndex);
+            return null;
+        }
+
+        var scene = SceneManager.GetSceneByBuildIndex(buildIndex);
+        return scene.name;
+    }
 }
+
+
