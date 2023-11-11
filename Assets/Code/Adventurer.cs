@@ -119,7 +119,7 @@ public class Adventurer : MonoBehaviour
             if (jumpsLeft > 0)
             {
                 jumpsLeft--;
-                _rigidbody2D.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
+                _rigidbody2D.AddForce(Vector2.up * 14f, ForceMode2D.Impulse);
             }
         }
         animator.SetInteger("JumpsLeft", jumpsLeft);

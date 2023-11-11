@@ -122,18 +122,19 @@ public class GameController : MonoBehaviour
         timeGoing = false;
 
         // Get Current Level
-        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        int currentLevel = SceneManager.GetActiveScene().buildIndex - 1;
 
         // Get scores from memory and add new score
         List<string> scores = GetScores(currentLevel);
 
         scores.Add(timeElapsed.ToString());
         scores.Sort((a, b) => float.Parse(b).CompareTo(float.Parse(a)));
+        
 
         // Keep only top maxScores scores
         if (scores.Count > maxScores)
         {
-            scores.RemoveRange(maxScores, scores.Count - maxScores);
+            scores.RemoveRange(0, scores.Count - maxScores);
         }
 
         SaveScores(scores, currentLevel);
