@@ -46,7 +46,7 @@ public class Adventurer : MonoBehaviour
         animator = GetComponent<Animator>();
         bulletsLeft = 10;
         textBulletsLeft.text = bulletsLeft.ToString();
-        bloodSplatter.enabled = true;
+        bloodSplatter.enabled = false;
 
     }
 
@@ -276,8 +276,6 @@ public class Adventurer : MonoBehaviour
                 imageHealthBar.fillAmount = health / healthMax;
                 Destroy(other.gameObject);
             }
-            
-            
         }
     }
 
@@ -287,7 +285,7 @@ public class Adventurer : MonoBehaviour
         yield return new WaitForSeconds(2);
         //name = GetSceneName(0);
         //StartCoroutine(GameObject.FindObjectOfType<FadeOut>().FadeAndLoadScene(FadeOut.FadeDirection.In, name));
-        //SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
     }
 
     IEnumerator LoadNextLevelTimer()
@@ -296,7 +294,7 @@ public class Adventurer : MonoBehaviour
         yield return new WaitForSeconds(2);
         //name = GetSceneName(SceneManager.GetActiveScene().buildIndex + 1);
         //StartCoroutine(GameObject.FindObjectOfType<FadeOut>().FadeAndLoadScene(FadeOut.FadeDirection.In, name));
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     IEnumerator ShowBloodSplatter()

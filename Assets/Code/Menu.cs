@@ -110,23 +110,26 @@ public class Menu : MonoBehaviour
 
     public void OnPlayLevel1()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level1");
     }
 
     public void OnPlayLevel2()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Level2");
     }
+
     public void OnPlayLevel3()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Level3");
     }
-    public void levelsMenu()
+
+    public void OnLevelSelect()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Levels Menu");
     }
-    public void startMenu()
+
+    public void OnStartMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Start Menu");
     }
 }
