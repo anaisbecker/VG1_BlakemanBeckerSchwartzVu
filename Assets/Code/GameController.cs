@@ -128,13 +128,30 @@ public class GameController : MonoBehaviour
         List<string> scores = GetScores(currentLevel);
 
         scores.Add(timeElapsed.ToString());
-        scores.Sort((a, b) => float.Parse(b).CompareTo(float.Parse(a)));
-        
+
+        // Sort ascending, ignoring default 0 scores
+        scores.Sort((a, b) =>
+        {
+            if (a == "0" && b == "0")
+            {
+                return 0; // Both are 0, no change in order
+            }
+            else if (a == "0")
+            {
+                return 1; // x is 0, so y comes before x
+            }
+            else if (b == "0")
+            {
+                return -1; // y is 0, so x comes before y
+            }
+            return float.Parse(a).CompareTo(float.Parse(b));
+
+        });
 
         // Keep only top maxScores scores
         if (scores.Count > maxScores)
         {
-            scores.RemoveRange(0, scores.Count - maxScores);
+            scores.RemoveRange(maxScores, scores.Count - maxScores);
         }
 
         SaveScores(scores, currentLevel);
