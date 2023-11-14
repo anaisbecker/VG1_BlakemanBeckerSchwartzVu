@@ -272,7 +272,7 @@ public class Adventurer : MonoBehaviour
             }
             else
             {
-                health = Mathf.Min(healthMax, health + 10f);
+                health = Mathf.Min(healthMax, health + 20f);   
                 imageHealthBar.fillAmount = health / healthMax;
                 Destroy(other.gameObject);
             }
