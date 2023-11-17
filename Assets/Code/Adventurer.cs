@@ -17,6 +17,7 @@ public class Adventurer : MonoBehaviour
     Rigidbody2D _rigidbody2D;
     SpriteRenderer sprite;
     Animator animator;
+    Animator doorAnimator;
     public Transform aimPivot;
     public GameObject projectilePrefab;
     public Image bloodSplatter;
@@ -229,6 +230,8 @@ public class Adventurer : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Door>())
         {
+            doorAnimator = other.gameObject.GetComponent<Door>().GetComponent<Animator>();
+            doorAnimator.SetTrigger("Open");
             textGameOver.text = "Level Complete";
             GameController.instance.CompleteRound();
 
