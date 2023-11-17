@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 7662447602922833762}
   - component: {fileID: 8563780474281302505}
   - component: {fileID: 3936861768320786954}
-  - component: {fileID: 5566205318806750112}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +120,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5566205318806750112}
+      - m_Target: {fileID: 3139007256334063616}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -133,22 +132,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5566205318806750112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129132757057406274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b21570b1ff07b42e3be8f6b857fee7e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 7979286839517315956}
-  mutedImage: {fileID: 0}
-  soundImage: {fileID: 0}
-  button: {fileID: 0}
 --- !u!1 &2757999221058300582
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,9 +144,8 @@ GameObject:
   - component: {fileID: 1068313902388284531}
   - component: {fileID: 5727334775673649269}
   - component: {fileID: 2903876012492465719}
-  - component: {fileID: 552111642602907981}
   m_Layer: 5
-  m_Name: soundButton
+  m_Name: Button Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,7 +252,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 552111642602907981}
+      - m_Target: {fileID: 3139007256334063616}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: MuteSound
         m_Mode: 1
@@ -282,22 +264,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &552111642602907981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2757999221058300582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b21570b1ff07b42e3be8f6b857fee7e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
-  mutedImage: {fileID: 21300000, guid: 2a12a0214914f4273ba030a434bacfd2, type: 3}
-  soundImage: {fileID: 21300000, guid: d03d2a9c0091d4ed8b78bc3d6c8b0d92, type: 3}
-  button: {fileID: 2903876012492465719}
 --- !u!1 &3495413179876817694
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,9 +544,8 @@ GameObject:
   - component: {fileID: 8652309283132872707}
   - component: {fileID: 1989176209838121956}
   - component: {fileID: 2744634751440048386}
-  - component: {fileID: 709787200366553454}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -687,7 +652,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 709787200366553454}
+      - m_Target: {fileID: 3139007256334063616}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Home
         m_Mode: 1
@@ -699,22 +664,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &709787200366553454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3786091680242503995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b21570b1ff07b42e3be8f6b857fee7e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
-  mutedImage: {fileID: 0}
-  soundImage: {fileID: 0}
-  button: {fileID: 0}
 --- !u!1 &3847502016827347112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,9 +960,8 @@ GameObject:
   - component: {fileID: 2135224993796514538}
   - component: {fileID: 6867896351476968686}
   - component: {fileID: 2049187991597899081}
-  - component: {fileID: 3388715576186675406}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Button Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1120,7 +1068,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3388715576186675406}
+      - m_Target: {fileID: 3139007256334063616}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -1132,22 +1080,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3388715576186675406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5812760950013154037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b21570b1ff07b42e3be8f6b857fee7e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 7979286839517315956}
-  mutedImage: {fileID: 0}
-  soundImage: {fileID: 0}
-  button: {fileID: 0}
 --- !u!1 &6004253249762446729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,10 +1638,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1830337282502160605}
   - {fileID: 7165366798060679214}
-  - {fileID: 1241673604774311936}
   - {fileID: 3015746297674641264}
+  - {fileID: 1830337282502160605}
+  - {fileID: 1241673604774311936}
   - {fileID: 5126077423805518520}
   m_Father: {fileID: 8495434019660764572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1903,6 +1835,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 7979286839517315956}
-  mutedImage: {fileID: 0}
-  soundImage: {fileID: 0}
-  button: {fileID: 0}
+  mutedImage: {fileID: 21300000, guid: 2a12a0214914f4273ba030a434bacfd2, type: 3}
+  soundImage: {fileID: 21300000, guid: d03d2a9c0091d4ed8b78bc3d6c8b0d92, type: 3}
+  button: {fileID: 2903876012492465719}

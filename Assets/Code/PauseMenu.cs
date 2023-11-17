@@ -14,6 +14,14 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         Adventurer.instance.isPaused = true;
+        if (AudioListener.volume == 0)
+        {
+            button.image.sprite = mutedImage;
+        }
+        else
+        {
+            button.image.sprite = soundImage;
+        }
     }
 
     public void Resume()
