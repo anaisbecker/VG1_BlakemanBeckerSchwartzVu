@@ -29,6 +29,7 @@ public class Menu : MonoBehaviour
     {
         UpdateScoreboard(2);
     }
+
     public void ShowScoreLevel3()
     {
         UpdateScoreboard(3);

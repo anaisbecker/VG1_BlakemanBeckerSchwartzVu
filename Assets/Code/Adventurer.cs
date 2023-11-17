@@ -171,17 +171,10 @@ public class Adventurer : MonoBehaviour
                 SoundManager.instance.PlaySoundHurt();
 
                 lastHurtSoundTime = Time.time;
-                TakeDamage(10f * Time.deltaTime);
-                bounceBack = true;
             }
 
-
-            else
-            {
-                TakeDamage(10f * Time.deltaTime);
-                bounceBack = true;
-            }
-
+            TakeDamage(10f * Time.deltaTime);
+            bounceBack = true;
         }
     }
 
