@@ -31,6 +31,7 @@ public class Adventurer : MonoBehaviour
     public bool bounceBack = false;
     public Vector2 movement;
     public bool isPaused;
+    public bool isGameOver = false;
     private float lastHurtSoundTime = 0f;
     public string sceneName;
 
@@ -65,7 +66,7 @@ public class Adventurer : MonoBehaviour
         //aimPivot.rotation = Quaternion.Euler(0, 0, angleToMouse);
 
         // On Menu Pause
-        if(isPaused)
+        if(isPaused || isGameOver)
         {
             return;
         }
@@ -218,6 +219,7 @@ public class Adventurer : MonoBehaviour
 
     void Die()
     {
+        isGameOver = true;
         gameObject.GetComponent<Renderer>().enabled = false;
         textGameOver.text = "Game Over";
         // Stop Timer
