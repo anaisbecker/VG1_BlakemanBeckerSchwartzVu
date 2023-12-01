@@ -5029,7 +5029,7 @@ Transform:
   m_GameObject: {fileID: 1285408841}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.587568, y: 3.2206502, z: -10}
+  m_LocalPosition: {x: -22.57649, y: 3.2206597, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6279,6 +6279,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4247182722679296700, guid: 53414db61e5a946438b84e0998ff565b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f82a7868eb65482eacce5e726fff197, type: 2}
+    - target: {fileID: 4247182722679296700, guid: 53414db61e5a946438b84e0998ff565b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5862676976387592352, guid: 3f82a7868eb65482eacce5e726fff197, type: 2}
+    - target: {fileID: 4247182722679296700, guid: 53414db61e5a946438b84e0998ff565b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6004253249762446729, guid: 53414db61e5a946438b84e0998ff565b, type: 3}
       propertyPath: m_Name
       value: Canvas

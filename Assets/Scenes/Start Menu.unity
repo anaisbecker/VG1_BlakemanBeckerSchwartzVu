@@ -181,7 +181,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Goal: Navigate to the exit while avoiding zombies. Pick up ammunition
-    to defend youseld and first aid kits to restore health. Watch out for fire and
+    to defend yourself and first aid kits to restore health. Watch out for fire and
     acid water!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
