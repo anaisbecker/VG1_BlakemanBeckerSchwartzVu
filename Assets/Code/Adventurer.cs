@@ -175,7 +175,7 @@ public class Adventurer : MonoBehaviour
                 lastHurtSoundTime = Time.time;
             }
 
-            TakeDamage(10f * Time.deltaTime);
+            TakeDamage(15f * Time.deltaTime);
             bounceBack = true;
         }
     }

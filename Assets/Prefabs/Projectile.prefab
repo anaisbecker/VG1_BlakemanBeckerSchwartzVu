@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6494548cf09604efd86d032cd0821f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletSound: {fileID: 8300000, guid: 348f2704ec39c41748ca3d24276ca6cb, type: 3}
 --- !u!82 &4334455828595621968
 AudioSource:
   m_ObjectHideFlags: 0
@@ -169,12 +170,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5955464245821329089}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 348f2704ec39c41748ca3d24276ca6cb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.633
   m_Pitch: 1
   Loop: 0
   Mute: 0
