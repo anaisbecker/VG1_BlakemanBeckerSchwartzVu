@@ -283,7 +283,7 @@ public class Adventurer : MonoBehaviour
         yield return new WaitForSeconds(2);
         //name = GetSceneName(0);
         //StartCoroutine(GameObject.FindObjectOfType<FadeOut>().FadeAndLoadScene(FadeOut.FadeDirection.In, name));
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Levels Menu");
     }
 
     IEnumerator LoadNextLevelTimer()

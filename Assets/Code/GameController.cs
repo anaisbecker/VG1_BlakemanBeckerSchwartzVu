@@ -122,7 +122,7 @@ public class GameController : MonoBehaviour
         timeGoing = false;
 
         // Get Current Level
-        int currentLevel = SceneManager.GetActiveScene().buildIndex - 1;
+        int currentLevel = SceneManager.GetActiveScene().buildIndex - 2; // Change as build settings change
 
         // Get scores from memory and add new score
         List<string> scores = GetScores(currentLevel);
